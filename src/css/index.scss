@@ -1,1 +1,69 @@
 @import "reset";
+
+// start navbar
+
+* {
+  font: 400 14px 'Roboto Slab', serif;
+  color: #777777;
+}
+
+.navbar {
+  width: 100%;
+  height: 114px;
+  padding: 43px 230px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #7cc576;
+
+    margin-right: 5px;
+  }
+
+  &__name {
+    color: #555555;
+    font: 700 18px 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.nav {
+  width: 31vw;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__anchor {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+    will-change: color;
+    transition: 0.2s all;
+    
+    &:hover {
+      color: #7cc576;
+    }
+  }
+}
+
+// e/o navbar
