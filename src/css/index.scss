@@ -158,3 +158,42 @@
 }
 
 // e/o sections - general rules
+
+
+// start about sections
+
+.articles {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:nth-child(2) {
+    margin: 0 55px;
+  }
+
+  &:last-child {
+    margin-top: 10px;
+  }
+
+  &__title {
+    color: #222;
+    font: 700 18px / 1em 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: -0.45px;
+
+    margin: 35px 0 15px;
+  }
+
+  &__par {
+    text-align: center;
+  }
+}
+
+// e/o about sections
