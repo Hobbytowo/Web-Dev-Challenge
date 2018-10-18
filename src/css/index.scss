@@ -87,7 +87,7 @@
     background: url(static/background.png) center / cover no-repeat;
     z-index: -1;
 
-    &:after { // opacity
+    &:after { // background opacity
       content: '';
       position: absolute;
       top: 0;
@@ -152,6 +152,7 @@
   }
 
   &__par {
+    font-size: 20px;
     text-align: center;
     margin-bottom: 85px;
   }
@@ -282,7 +283,7 @@
     background: url(static/blogBackground.png) center / cover no-repeat;
     z-index: -1;
 
-    &:after { // opacity
+    &:after { // background opacity
       content: '';
       position: absolute;
       top: 0;
@@ -295,3 +296,82 @@
 }
 
 // e/o blog sections
+
+
+// start portfolio sections
+
+.project {
+
+  &__title {
+    color: #222;
+    font: 700 18px / 4em 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: -0.45px;
+  }
+
+  &__par {
+    max-width: 30.3vw;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    line-height: 1.7em;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+
+  margin: 20px 0;
+
+  &__imgContainer {
+    width: 68px;
+    height: 68px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: 'Montserrat';
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.45px;
+  }
+
+  &__par {
+    font-size: 16px;
+  }
+}
+
+.btn--details {
+  background: #fff;
+  width: auto;
+  height: auto;
+  color: #7cc576;
+  font-size: 16px;
+  text-shadow: none;
+  letter-spacing: -0.4px;
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+
+  & .fas { // arrow icon
+    color: #7cc576;
+    margin-left: 7px;
+
+    transition: 0.2s all;
+  }
+
+  &:hover .fas {
+    color: #222;
+    background-color: #fff;
+  }
+}
+
+// e/o portfolio sections
