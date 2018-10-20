@@ -660,7 +660,24 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
+
+    transition: 0.2s all;
+    will-change: background-color;
+
+    &:nth-child(1):hover {
+      background-color: #00aced;
+    }
+    &:nth-child(2):hover {
+      background-color: #3b5998;
+    }
+    &:nth-child(3):hover {
+      background-color: #cb2028;
+    }
+    &:nth-child(4):hover {
+      background-color: #da2713;
+    }
   }
 }
+
 
 // e/o footer sections
