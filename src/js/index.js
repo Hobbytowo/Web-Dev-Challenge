@@ -25,3 +25,16 @@ $('.header__btn').on('click', () => {
 })
 
 // e/o smooth scroll
+
+// START resize sticky nav
+
+$(window).on('scroll', () => {
+  if ($(window).scrollTop() > 50) {
+    !$('.navbar').hasClass('navbar--resiezed') &&
+    $('.navbar').addClass('navbar--resiezed')
+  } else {
+    $('.navbar').hasClass('navbar--resiezed') &&
+    $('.navbar').removeClass('navbar--resiezed')
+  }
+})
+// e/o resize sticky nav

@@ -11,7 +11,11 @@
   background-color: #fff;
   width: 100%;
   height: 114px;
-  padding: 43px 16.5%;
+  padding: 0 16.5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   position: sticky;
   top: 0;
@@ -19,10 +23,11 @@
   z-index: 3;
   border-bottom: 1px solid #777;
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  will-change: height;
+  transition: 0.4s all;
+
+  &--resiezed {
+    height: 65px;
   }
 }
 
