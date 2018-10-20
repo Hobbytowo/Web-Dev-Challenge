@@ -27,6 +27,10 @@ $('.header__btn').on('click', () => {
   smoothScroll('portfolio')
 })
 
+$('.contact__btn').on('click', () => {
+  smoothScroll('contact')
+})
+
 // e/o smooth scroll
 
 // START resize sticky nav
