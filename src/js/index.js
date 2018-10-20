@@ -5,18 +5,21 @@ import $ from 'jquery'
 const smoothScroll = sectionTo => {
   const hash = `#${ sectionTo }`
 
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 600, () => {
-    if (sectionTo === 'home') {
-      window.location.hash = 0
-    } else {
-      window.location.hash = hash
-    }
-  })
+  if (sectionTo === 'home') {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 600)
+  } else {
+    $('html, body').animate({
+      scrollTop: ($(hash).offset().top - $('.navbar').height())
+    }, 600)
+  }
+
+  window.location.hash = hash
 }
 
 $('.nav').on('click', e => {
+  e.target.href &&
   smoothScroll(e.target.href.split('#')[1])
 })
 
@@ -37,4 +40,5 @@ $(window).on('scroll', () => {
     $('.navbar').removeClass('navbar--resiezed')
   }
 })
+
 // e/o resize sticky nav
