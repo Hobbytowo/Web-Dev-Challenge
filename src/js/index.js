@@ -82,3 +82,16 @@ $(window).on('scroll', () => {
 })
 
 // e/o scroll events
+
+// START hamburger menu
+
+$('.nav__icon').on('click', () => {
+  $('.nav').toggleClass('nav--close')
+})
+
+$('.nav__listItem').on('click', e => {
+  !$('.nav').hasClass('nav--close') &&
+  $('.nav').addClass('nav--close')
+})
+
+// e/o hamburger menu

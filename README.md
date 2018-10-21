@@ -17,6 +17,7 @@ Single page Treehouse website PSD to HTML.
 - Sticky nav with animated height
 - Animate gear image on scroll events
 - Paralax image effect in blog section
+- Hamburger mobile menu
 
 ## Setup
 
