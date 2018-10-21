@@ -33,9 +33,16 @@ $('.contact__btn').on('click', () => {
 
 // e/o smooth scroll
 
-// START resize sticky nav
+// START scroll events
+
+const topStartAnimante = $('.blog').offset().top - $(window).height()
+const topStopAnimante = $('.blog').offset().top + 2 * $(window).height()
+const gear = $('.blog__img')
+let lastScrollTop = 0
+let rotateDeg = 0
 
 $(window).on('scroll', () => {
+  // START resize sticky nav
   if ($(window).scrollTop() > 50) {
     !$('.navbar').hasClass('navbar--resiezed') &&
     $('.navbar').addClass('navbar--resiezed')
@@ -43,6 +50,35 @@ $(window).on('scroll', () => {
     $('.navbar').hasClass('navbar--resiezed') &&
     $('.navbar').removeClass('navbar--resiezed')
   }
+  // e/o resize sticky nav
+
+  // START gear animation
+
+  if ($(window).scrollTop() > topStartAnimante && $(window).scrollTop() < topStopAnimante) {
+    let currentScrollTop = $(window).scrollTop()
+
+    if (currentScrollTop > lastScrollTop) { // on downscroll
+      rotateDeg -= 3
+      gear.css({
+        'transform': `
+          rotate3d(0, 0, 1, ${ rotateDeg }deg)
+          translate3d(50%, 0, 0)
+          `
+      })
+    } else { // on upscroll
+      rotateDeg += 3
+      gear.css({
+        'transform': `
+          rotate3d(0, 0, 1, ${ rotateDeg }deg)
+          translate3d(50%, 0, 0)
+          `
+      })
+    }
+
+    lastScrollTop = currentScrollTop
+  }
+
+  // e/o gear animation
 })
 
-// e/o resize sticky nav
+// e/o scroll events

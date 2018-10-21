@@ -276,8 +276,8 @@
 
   & .img {
     will-change: transform;
-    transform: translate3d(50%, 0, 0);
-
+    transition: transform 0s;
+    transform-origin: 100% 50%;
   }
 }
 
